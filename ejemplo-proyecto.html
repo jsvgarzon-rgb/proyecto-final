@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Origen | Portafolio de Marca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafaf9; /* Stone 50 */
+            color: #292524; /* Stone 800 */
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #fafaf9; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+        .custom-scrollbar::-webkit-scrollbar { height: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f5f5f4; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #431407; border-radius: 4px; }
+
+        /* Brand Colors */
+        .bg-brand-primary { background-color: #431407; } /* Deep brown */
+        .bg-brand-secondary { background-color: #d97706; } /* Amber */
+        .bg-brand-accent { background-color: #10b981; } /* Emerald */
+        .bg-brand-light { background-color: #fefce8; } /* Cream */
+
+        .text-brand-primary { color: #431407; }
+        .text-brand-secondary { color: #d97706; }
+
+        /* Mockup Styles */
+        .phone-mockup {
+            border: 10px solid #1c1917;
+            border-radius: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            background-color: #fff;
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 24px;
+            background-color: #1c1917;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-200 selection:text-stone-900">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-serif font-bold text-2xl text-brand-primary tracking-tight flex items-center gap-2">
+                <span class="w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center italic text-lg">C</span>
+                Café Origen.
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-semibold text-stone-600">
+                <a href="#identidad" class="hover:text-brand-secondary transition-colors">1. Identidad</a>
+                <a href="#manual" class="hover:text-brand-secondary transition-colors">2. Manual de Marca</a>
+                <a href="#campana" class="hover:text-brand-secondary transition-colors">3. Campaña Digital</a>
+            </div>
+            <a href="index.html" class="text-sm font-bold text-stone-600 hover:text-stone-900 border-2 border-stone-200 px-5 py-2.5 rounded-full hover:bg-stone-50 transition-colors">
+                Volver a la clase
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-stone-100">
+        <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(#431407 2px, transparent 2px); background-size: 32px 32px;"></div>
+        
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-6 reveal active">
+            <div class="inline-block mb-6 px-6 py-2 rounded-full border border-amber-300 bg-amber-50 text-amber-800 font-bold text-sm tracking-widest uppercase shadow-sm">
+                Proyecto Final Integrador
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 text-brand-primary leading-tight">
+                Café <span class="italic text-brand-secondary font-light">Origen</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-stone-700 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+                Un caso de estudio completo. Desde la conceptualización de la identidad visual hasta el despliegue de la campaña digital.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#manual" class="bg-brand-primary text-white px-8 py-4 rounded-full font-bold hover:bg-stone-800 transition-all shadow-xl hover:-translate-y-1">
+                    Ver Manual de Marca
+                </a>
+                <a href="#campana" class="bg-white text-brand-primary border-2 border-stone-200 px-8 py-4 rounded-full font-bold hover:bg-stone-50 transition-all shadow-md hover:-translate-y-1">
+                    Ver Campaña Digital
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. IDENTIDAD VISUAL -->
+    <section id="identidad" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-brand-secondary font-bold tracking-widest uppercase text-sm">Fase 01</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-brand-primary mt-3 mb-6">Identidad y Concepto</h2>
+                <p class="text-lg text-stone-600 max-w-2xl mx-auto">La base estratégica de nuestra marca, construida sobre principios sólidos de diseño y comunicación.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-stone-50 p-10 rounded-3xl border border-stone-100 reveal delay-100 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-3xl mb-6 shadow-sm">🎯</div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 text-brand-primary">Propósito</h3>
+                    <p class="text-stone-700 leading-relaxed">Conectar a los amantes del buen café con las familias campesinas que lo cultivan, promoviendo el comercio justo, la sostenibilidad y el respeto por la tierra.</p>
+                </div>
+                <div class="bg-stone-50 p-10 rounded-3xl border border-stone-100 reveal delay-200 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mb-6 shadow-sm">👁️</div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 text-brand-primary">Visión Visual</h3>
+                    <p class="text-stone-700 leading-relaxed">Una estética cálida, orgánica y minimalista. Buscamos transmitir la sensación de una mañana tranquila en la finca cafetera, usando texturas naturales.</p>
+                </div>
+                <div class="bg-stone-50 p-10 rounded-3xl border border-stone-100 reveal delay-300 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-2xl bg-stone-200 text-stone-700 flex items-center justify-center text-3xl mb-6 shadow-sm">⭕</div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 text-brand-primary">Psicología de la Forma</h3>
+                    <p class="text-stone-700 leading-relaxed">Usamos predominantemente <strong class="text-brand-primary">formas circulares y orgánicas</strong>. El círculo denota comunidad, protección y el ciclo continuo de la naturaleza, alineándose con nuestro enfoque sostenible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. MANUAL DE MARCA -->
+    <section id="manual" class="py-24 px-6 bg-stone-100 border-y border-stone-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal">
+                <span class="text-brand-secondary font-bold tracking-widest uppercase text-sm">Fase 02</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-brand-primary mt-3">Manual de Marca</h2>
+                <p class="text-lg text-stone-600 mt-4">Reglas y elementos visuales que garantizan la consistencia de la marca.</p>
+            </div>
+
+            <!-- Logotipo y Variaciones -->
+            <div class="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-xl shadow-stone-200/50 mb-12 reveal">
+                <h3 class="text-3xl font-serif font-bold mb-10 text-brand-primary flex items-center gap-4">
+                    <span class="bg-brand-primary text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-sans">1</span>
+                    Logotipo y Variaciones
+                </h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Logo Principal -->
+                    <div class="bg-stone-50 rounded-3xl p-12 flex flex-col items-center justify-center text-center border border-stone-200 min-h-[400px]">
+                        <div class="w-20 h-20 bg-brand-primary rounded-full mb-6 flex items-center justify-center text-white font-serif italic text-4xl shadow-lg">C</div>
+                        <div class="font-serif text-5xl font-bold text-brand-primary tracking-tight mb-2">Café Origen</div>
+                        <div class="text-xs font-bold uppercase tracking-[0.4em] text-brand-secondary">Especialidad</div>
+                        <div class="mt-12 px-4 py-2 bg-white rounded-full text-xs font-bold text-stone-500 border border-stone-200 uppercase tracking-wider">Logotipo Principal (Positivo)</div>
+                    </div>
+                    
+                    <!-- Variaciones -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Negativo -->
+                        <div class="bg-brand-primary rounded-3xl p-8 flex flex-col items-center justify-center text-center min-h-[190px] shadow-inner">
+                            <div class="font-serif text-3xl font-bold text-white tracking-tight mb-2">Café Origen</div>
+                            <div class="text-[9px] font-bold uppercase tracking-[0.3em] text-white/70">Especialidad</div>
+                            <div class="mt-6 text-[10px] font-bold text-white/50 uppercase tracking-wider">Versión Negativa</div>
+                        </div>
+                        <!-- Monocromo -->
+                        <div class="bg-white border-2 border-stone-900 rounded-3xl p-8 flex flex-col items-center justify-center text-center min-h-[190px]">
+                            <div class="font-serif text-3xl font-bold text-stone-900 tracking-tight mb-2">Café Origen</div>
+                            <div class="text-[9px] font-bold uppercase tracking-[0.3em] text-stone-900">Especialidad</div>
+                            <div class="mt-6 text-[10px] font-bold text-stone-500 uppercase tracking-wider">Monocromo (Tinta)</div>
+                        </div>
+                        <!-- Isotipo -->
+                        <div class="bg-stone-200 rounded-3xl p-8 flex flex-col items-center justify-center text-center sm:col-span-2 min-h-[190px]">
+                            <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center text-white font-serif italic text-3xl shadow-md">C</div>
+                            <div class="mt-6 text-[10px] font-bold text-stone-600 uppercase tracking-wider">Isotipo (Redes / Favicon)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colorimetría y Tipografía -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Colores -->
+                <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-stone-200/50 reveal delay-100">
+                    <h3 class="text-3xl font-serif font-bold mb-10 text-brand-primary flex items-center gap-4">
+                        <span class="bg-brand-primary text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-sans">2</span>
+                        Colorimetría
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <!-- Color 1 -->
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-4 rounded-2xl hover:bg-stone-50 transition-colors">
+                            <div class="w-24 h-24 rounded-2xl bg-brand-primary shadow-md shrink-0"></div>
+                            <div>
+                                <h4 class="font-bold text-xl text-stone-900 mb-1">Tierra Profunda</h4>
+                                <div class="flex gap-3 mb-2">
+                                    <span class="text-xs font-mono bg-stone-200 text-stone-700 px-2 py-1 rounded">HEX #431407</span>
+                                    <span class="text-xs font-mono bg-stone-200 text-stone-700 px-2 py-1 rounded">RGB 67, 20, 7</span>
+                                </div>
+                                <p class="text-sm text-stone-600 leading-relaxed"><strong class="text-stone-900">Psicología:</strong> Estabilidad, tradición y elegancia. Representa el color exacto de un grano de café tostado oscuro.</p>
+                            </div>
+                        </div>
+                        <!-- Color 2 -->
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-4 rounded-2xl hover:bg-stone-50 transition-colors">
+                            <div class="w-24 h-24 rounded-2xl bg-brand-secondary shadow-md shrink-0"></div>
+                            <div>
+                                <h4 class="font-bold text-xl text-stone-900 mb-1">Ámbar Tostado</h4>
+                                <div class="flex gap-3 mb-2">
+                                    <span class="text-xs font-mono bg-stone-200 text-stone-700 px-2 py-1 rounded">HEX #D97706</span>
+                                    <span class="text-xs font-mono bg-stone-200 text-stone-700 px-2 py-1 rounded">RGB 217, 119, 6</span>
+                                </div>
+                                <p class="text-sm text-stone-600 leading-relaxed"><strong class="text-stone-900">Psicología:</strong> Energía, calidez y entusiasmo. Se usa para botones y llamados a la acción (CTAs).</p>
+                            </div>
+                        </div>
+                        <!-- Color 3 -->
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-4 rounded-2xl hover:bg-stone-50 transition-colors">
+                            <div class="w-24 h-24 rounded-2xl bg-brand-accent shadow-md shrink-0"></div>
+                            <div>
+                                <h4 class="font-bold text-xl text-stone-900 mb-1">Verde Origen</h4>
+                                <div class="flex gap-3 mb-2">
+                                    <span class="text-xs font-mono bg-stone-200 text-stone-700 px-2 py-1 rounded">HEX #10B981</span>
+                                    <span class="text-xs font-mono bg-stone-200 text-stone-700 px-2 py-1 rounded">RGB 16, 185, 129</span>
+                                </div>
+                                <p class="text-sm text-stone-600 leading-relaxed"><strong class="text-stone-900">Psicología:</strong> Naturaleza, frescura y sostenibilidad. Conecta la marca con el cafetal y el medio ambiente.</p>
+                            </div>
+                        </div>
+                        <!-- Color 4 -->
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-4 rounded-2xl hover:bg-stone-50 transition-colors">
+                            <div class="w-24 h-24 rounded-2xl bg-brand-light border-2 border-stone-200 shadow-sm shrink-0"></div>
+                            <div>
+                                <h4 class="font-bold text-xl text-stone-900 mb-1">Crema</h4>
+                                <div class="flex gap-3 mb-2">
+                                    <span class="text-xs font-mono bg-stone-200 text-stone-700 px-2 py-1 rounded">HEX #FEFCE8</span>
+                                    <span class="text-xs font-mono bg-stone-200 text-stone-700 px-2 py-1 rounded">RGB 254, 252, 232</span>
+                                </div>
+                                <p class="text-sm text-stone-600 leading-relaxed"><strong class="text-stone-900">Psicología:</strong> Pureza, suavidad y claridad. Es el fondo principal para garantizar contraste y legibilidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipografía -->
+                <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-stone-200/50 reveal delay-200">
+                    <h3 class="text-3xl font-serif font-bold mb-10 text-brand-primary flex items-center gap-4">
+                        <span class="bg-brand-primary text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-sans">3</span>
+                        Tipografía
+                    </h3>
+                    
+                    <div class="mb-12 bg-stone-50 p-8 rounded-3xl border border-stone-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <p class="text-xs text-stone-500 uppercase tracking-widest font-bold bg-white px-3 py-1 rounded-full border border-stone-200">Titulares (H1, H2)</p>
+                            <span class="text-sm font-bold text-brand-primary">Serif</span>
+                        </div>
+                        <div class="font-serif text-6xl text-brand-primary mb-4 leading-none">Playfair Display</div>
+                        <p class="text-lg font-serif italic text-stone-600 mb-6 border-l-4 border-brand-secondary pl-4">Aporta elegancia, tradición y autoridad a la marca.</p>
+                        <div class="text-2xl font-serif text-stone-800 break-words leading-relaxed">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</div>
+                        <div class="text-2xl font-serif text-stone-500 mt-2">0123456789 &@#%*!</div>
+                    </div>
+
+                    <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <p class="text-xs text-stone-500 uppercase tracking-widest font-bold bg-white px-3 py-1 rounded-full border border-stone-200">Cuerpo de Texto (P)</p>
+                            <span class="text-sm font-bold text-brand-primary">Sans-Serif</span>
+                        </div>
+                        <div class="font-sans text-5xl font-bold text-stone-900 mb-4 tracking-tight leading-none">Inter</div>
+                        <p class="text-base font-sans text-stone-600 mb-6 border-l-4 border-brand-secondary pl-4">Garantiza máxima legibilidad, modernidad y neutralidad en párrafos largos.</p>
+                        <div class="text-lg font-sans text-stone-800 break-words leading-relaxed">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</div>
+                        <div class="text-lg font-sans text-stone-500 mt-2">0123456789 &@#%*!</div>
+                    </div>
+
+                    <!-- Ejemplo de Aplicación (Jerarquía Visual) -->
+                    <div class="mt-8 bg-white p-8 rounded-3xl border border-stone-200 shadow-sm">
+                        <p class="text-xs text-stone-500 uppercase tracking-widest font-bold mb-6 border-b border-stone-100 pb-4">Ejemplo de Aplicación (Jerarquía Visual)</p>
+                        
+                        <h1 class="font-serif text-4xl md:text-5xl text-brand-primary font-bold mb-4">El ritual de cada mañana</h1>
+                        <h2 class="font-serif text-2xl text-brand-secondary italic mb-4">Cultivado con paciencia, tostado con pasión.</h2>
+                        <p class="font-sans text-base text-stone-600 leading-relaxed mb-4">
+                            En <strong class="text-stone-900">Café Origen</strong>, creemos que una buena taza de café es mucho más que una bebida; es una experiencia que conecta los sentidos con la tierra. Nuestro proceso de selección manual garantiza que solo los granos de la más alta calidad lleguen a tu mesa, preservando los aromas y sabores únicos de nuestras montañas.
+                        </p>
+                        <p class="font-sans text-sm text-stone-500 leading-relaxed">
+                            <em>Nota: Este texto demuestra cómo se combinan nuestras tipografías. Los titulares (Playfair Display) capturan la atención con su elegancia clásica, mientras que el cuerpo de texto (Inter) ofrece una lectura fluida, moderna y accesible.</em>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Leyes de Gestalt -->
+                <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-stone-200/50 reveal delay-300 mt-12">
+                    <h3 class="text-3xl font-serif font-bold mb-8 text-brand-primary flex items-center gap-4">
+                        <span class="bg-brand-primary text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-sans">4</span>
+                        Leyes de Gestalt
+                    </h3>
+                    <p class="text-lg text-stone-600 mb-10 max-w-3xl">La construcción de nuestra identidad visual se apoya en la psicología de la forma para garantizar que el mensaje sea claro, memorable y estéticamente agradable. Hemos aplicado las siguientes <strong>3 leyes de Gestalt</strong>:</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Ley 1 -->
+                        <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100 hover:shadow-md transition-shadow">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-secondary/20 text-brand-secondary flex items-center justify-center text-3xl mb-6">🧩</div>
+                            <h4 class="text-xl font-serif font-bold text-brand-primary mb-3">1. Ley de Cierre</h4>
+                            <p class="text-stone-600 leading-relaxed">Nuestro isotipo no dibuja un grano de café completo; utiliza el espacio negativo entre dos manos ahuecadas. El cerebro del espectador "cierra" la forma automáticamente, creando una experiencia visual más interactiva y memorable.</p>
+                        </div>
+                        <!-- Ley 2 -->
+                        <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100 hover:shadow-md transition-shadow">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-primary/10 text-brand-primary flex items-center justify-center text-3xl mb-6">🎯</div>
+                            <h4 class="text-xl font-serif font-bold text-brand-primary mb-3">2. Figura y Fondo</h4>
+                            <p class="text-stone-600 leading-relaxed">El alto contraste entre el color Crema (fondo) y el Tierra Profunda (figura) en nuestro logotipo principal permite que la marca resalte instantáneamente. El ojo puede separar claramente el elemento principal de su entorno.</p>
+                        </div>
+                        <!-- Ley 3 -->
+                        <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100 hover:shadow-md transition-shadow">
+                            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-3xl mb-6">📏</div>
+                            <h4 class="text-xl font-serif font-bold text-brand-primary mb-3">3. Ley de Proximidad</h4>
+                            <p class="text-stone-600 leading-relaxed">En nuestras piezas gráficas y en la construcción del logo, el isotipo, el nombre "Café Origen" y el descriptor están agrupados a una distancia específica. Esto le indica al cerebro que funcionan como una unidad indivisible.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CAMPAÑA DIGITAL -->
+    <section id="campana" class="py-24 px-6 bg-brand-primary text-white relative overflow-hidden">
+        <!-- Decoración de fondo -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="mb-20 text-center reveal">
+                <span class="text-brand-secondary font-bold tracking-widest uppercase text-sm bg-white/10 px-4 py-1.5 rounded-full">Fase 03</span>
+                <h2 class="text-4xl md:text-6xl font-bold font-serif mt-6 mb-4">Campaña Digital</h2>
+                <p class="text-white/80 text-xl max-w-2xl mx-auto">Aplicación práctica de la identidad visual en piezas reales para redes sociales y web.</p>
+            </div>
+
+            <!-- Posts y Stories (Mockups) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+                
+                <!-- 2 POSTS IG -->
+                <div class="reveal">
+                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 border-b border-white/20 pb-4">
+                        <span class="text-3xl">📱</span> 2 Posts de Instagram (1080x1080)
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <!-- Post 1 -->
+                        <div class="aspect-square bg-brand-light rounded-2xl overflow-hidden relative shadow-2xl group">
+                            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center opacity-90 mix-blend-multiply transition-transform duration-700 group-hover:scale-110"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/40 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-8 w-full z-10">
+                                <div class="w-12 h-12 bg-white rounded-full mb-4 flex items-center justify-center text-brand-primary font-serif italic text-xl shadow-lg">C</div>
+                                <h4 class="font-serif text-3xl font-bold text-white leading-tight drop-shadow-md">El origen de un buen día.</h4>
+                                <p class="text-brand-secondary font-bold uppercase tracking-widest text-xs mt-3">Café 100% Arábica</p>
+                            </div>
+                        </div>
+                        <!-- Post 2 -->
+                        <div class="aspect-square bg-brand-secondary rounded-2xl overflow-hidden relative flex flex-col items-center justify-center text-center p-8 shadow-2xl">
+                            <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+                            <h4 class="font-serif text-4xl font-bold text-white leading-tight mb-6 drop-shadow-md relative z-10">"No es solo café, es un ritual."</h4>
+                            <div class="w-16 h-1 bg-white/50 rounded-full mb-6 relative z-10"></div>
+                            <p class="text-brand-primary bg-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] shadow-lg relative z-10">Nueva Cosecha</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 STORIES -->
+                <div class="reveal delay-200">
+                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 border-b border-white/20 pb-4">
+                        <span class="text-3xl">🤳</span> 2 Stories (1080x1920)
+                    </h3>
+                    <div class="flex justify-center gap-8">
+                        <!-- Story 1 Mockup -->
+                        <div class="phone-mockup w-[240px] shrink-0">
+                            <div class="phone-notch"></div>
+                            <div class="w-full h-full bg-stone-900 relative">
+                                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-80"></div>
+                                <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/90"></div>
+                                
+                                <!-- Fake IG UI -->
+                                <div class="absolute top-8 left-4 right-4 flex items-center gap-2 z-10">
+                                    <div class="w-8 h-8 bg-brand-primary rounded-full border border-white/30 flex items-center justify-center text-white font-serif italic text-sm">C</div>
+                                    <span class="text-white text-xs font-bold">cafeorigen</span>
+                                    <span class="text-white/60 text-xs">2h</span>
+                                </div>
+
+                                <div class="absolute top-24 left-6 right-6 z-10">
+                                    <div class="bg-brand-secondary text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full inline-block mb-3 shadow-sm">Detrás de escena</div>
+                                    <h4 class="font-serif text-3xl font-bold text-white leading-tight drop-shadow-lg">Tostado<br>artesanal</h4>
+                                </div>
+                                <div class="absolute bottom-10 left-6 right-6 z-10">
+                                    <div class="bg-white/20 backdrop-blur-md border border-white/30 text-white text-center py-3 rounded-xl font-bold text-sm shadow-lg animate-bounce">
+                                        ↑ Desliza hacia arriba
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Story 2 Mockup -->
+                        <div class="phone-mockup w-[240px] shrink-0 hidden sm:block">
+                            <div class="phone-notch"></div>
+                            <div class="w-full h-full bg-brand-accent relative flex flex-col items-center justify-center p-6 text-center">
+                                <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+                                
+                                <div class="w-16 h-16 bg-white rounded-full mb-6 flex items-center justify-center text-brand-accent font-serif italic text-3xl shadow-lg relative z-10">C</div>
+                                <h4 class="font-serif text-3xl font-bold text-white leading-tight mb-8 drop-shadow-md relative z-10">¿Ya probaste nuestra edición limitada?</h4>
+                                
+                                <!-- Fake Sticker -->
+                                <div class="bg-white text-brand-accent font-black py-4 px-6 rounded-xl w-full shadow-2xl transform rotate-[-3deg] relative z-10">
+                                    COMPRAR AHORA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CARRUSEL (5 Slides) -->
+            <div class="mb-24 reveal">
+                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 border-b border-white/20 pb-4">
+                    <span class="text-3xl">📑</span> 1 Carrusel Storytelling (Mínimo 5 slides)
+                </h3>
+                
+                <!-- Scrollable Container -->
+                <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory custom-scrollbar">
+                    
+                    <!-- Slide 1: Hook -->
+                    <div class="snap-center shrink-0 w-[320px] aspect-square bg-brand-secondary rounded-3xl p-10 flex flex-col justify-center relative shadow-2xl border border-white/10">
+                        <div class="absolute top-6 right-6 bg-black/20 text-white px-3 py-1 rounded-full text-xs font-bold tracking-widest">1/5</div>
+                        <h4 class="font-serif text-4xl font-bold text-white leading-tight drop-shadow-md">¿Sabes cuántas manos tocan tu café antes de llegar a tu taza?</h4>
+                        <div class="absolute bottom-6 right-6 text-white text-3xl animate-pulse">👉</div>
+                    </div>
+                    
+                    <!-- Slide 2: Historia -->
+                    <div class="snap-center shrink-0 w-[320px] aspect-square bg-brand-light rounded-3xl p-10 flex flex-col justify-center relative shadow-2xl">
+                        <div class="absolute top-6 right-6 bg-stone-200 text-stone-600 px-3 py-1 rounded-full text-xs font-bold tracking-widest">2/5</div>
+                        <p class="text-brand-primary font-medium text-2xl leading-relaxed">Más de <strong class="font-black text-brand-secondary">40 familias campesinas</strong> en la región andina dedican su vida a seleccionar los mejores granos.</p>
+                        <div class="absolute bottom-6 right-6 text-brand-primary text-3xl animate-pulse">👉</div>
+                    </div>
+                    
+                    <!-- Slide 3: Historia -->
+                    <div class="snap-center shrink-0 w-[320px] aspect-square bg-brand-light rounded-3xl p-10 flex flex-col justify-center relative shadow-2xl">
+                        <div class="absolute top-6 right-6 bg-stone-200 text-stone-600 px-3 py-1 rounded-full text-xs font-bold tracking-widest">3/5</div>
+                        <p class="text-brand-primary font-medium text-2xl leading-relaxed">Nosotros nos aseguramos de que reciban un <strong class="font-black text-brand-accent">pago justo</strong>, eliminando intermediarios innecesarios.</p>
+                        <div class="absolute bottom-6 right-6 text-brand-primary text-3xl animate-pulse">👉</div>
+                    </div>
+                    
+                    <!-- Slide 4: Diferenciador -->
+                    <div class="snap-center shrink-0 w-[320px] aspect-square bg-brand-accent rounded-3xl p-10 flex flex-col justify-center relative shadow-2xl border border-white/10">
+                        <div class="absolute top-6 right-6 bg-black/20 text-white px-3 py-1 rounded-full text-xs font-bold tracking-widest">4/5</div>
+                        <h4 class="font-serif text-4xl font-bold text-white leading-tight mb-4 drop-shadow-md">Comercio Justo + Calidad Premium</h4>
+                        <p class="text-white/90 text-lg font-medium">Esa es nuestra promesa en cada bolsa de Café Origen.</p>
+                        <div class="absolute bottom-6 right-6 text-white text-3xl animate-pulse">👉</div>
+                    </div>
+                    
+                    <!-- Slide 5: CTA -->
+                    <div class="snap-center shrink-0 w-[320px] aspect-square bg-brand-primary rounded-3xl p-10 flex flex-col items-center justify-center text-center relative shadow-2xl border-2 border-brand-secondary">
+                        <div class="absolute top-6 right-6 bg-white/10 text-white px-3 py-1 rounded-full text-xs font-bold tracking-widest">5/5</div>
+                        <div class="w-20 h-20 bg-white rounded-full mb-6 flex items-center justify-center text-brand-primary font-serif italic text-4xl shadow-lg">C</div>
+                        <h4 class="font-serif text-3xl font-bold text-white mb-8">Sé parte del cambio.</h4>
+                        <button class="bg-brand-secondary text-white px-8 py-4 rounded-full text-lg font-bold w-full shadow-xl hover:bg-amber-500 transition-colors">Visita la tienda</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BANNER WEB -->
+            <div class="reveal">
+                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 border-b border-white/20 pb-4">
+                    <span class="text-3xl">💻</span> 1 Banner Web (1200x628)
+                </h3>
+                
+                <!-- Browser Mockup -->
+                <div class="w-full max-w-5xl mx-auto bg-white rounded-2xl overflow-hidden shadow-2xl border border-stone-800">
+                    <!-- Browser Top Bar -->
+                    <div class="bg-stone-100 px-4 py-3 flex items-center gap-2 border-b border-stone-200">
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                        <div class="ml-4 bg-white px-4 py-1 rounded-md text-xs text-stone-400 font-mono w-64 border border-stone-200 flex items-center gap-2">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            cafeorigen.com
+                        </div>
+                    </div>
+                    
+                    <!-- Banner Content -->
+                    <div class="aspect-[21/9] bg-brand-light relative flex items-center">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-40 mix-blend-multiply"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-brand-primary/95 via-brand-primary/80 to-transparent"></div>
+                        
+                        <div class="relative z-10 p-8 md:p-16 max-w-2xl">
+                            <div class="bg-brand-secondary text-white text-xs font-bold uppercase tracking-widest py-2 px-4 rounded-full inline-block mb-6 shadow-md">Envío Gratis Nacional</div>
+                            <h4 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg">El sabor de la montaña en tu puerta.</h4>
+                            <p class="text-white/90 mb-10 text-base md:text-xl font-medium drop-shadow-md max-w-lg">Suscríbete a nuestro plan mensual y recibe café recién tostado cada 15 días.</p>
+                            <button class="bg-white text-brand-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-stone-100 transition-colors shadow-2xl">
+                                Ver Planes de Suscripción
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-stone-900 text-stone-400 text-center">
+        <div class="w-12 h-12 bg-stone-800 rounded-full flex items-center justify-center text-stone-500 font-serif italic text-xl mx-auto mb-6">C</div>
+        <div class="font-serif italic text-3xl text-stone-300 mb-4">Café Origen</div>
+        <p class="text-sm mb-10 max-w-md mx-auto">Proyecto Integrador • Ejemplo de Manual de Marca y Campaña Digital para la Media Técnica.</p>
+        <a href="index.html" class="inline-block border border-stone-700 text-stone-300 px-8 py-3 rounded-full text-sm font-bold hover:bg-stone-800 hover:text-white transition-colors">
+            ← Volver a las instrucciones
+        </a>
+    </footer>
+
+    <script>
+        // Intersection Observer para animaciones
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Cambiar estilo del nav al hacer scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
